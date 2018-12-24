@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let object = {
+        Н: 1,
+        К: 5,
+        П: 2,
+        Р: 4,
+        О: 7
+      };
+
+      for (let key in object) {
+        console.log(key + ":", object[key]);
+      }
+
+      let str = "НННКПРРРРОРППППР";
+      let letters = str.split("");
+      let result = [];
+      let sum = 0;
+
+      for (let i = 0; i < str.length; i++) {
+        result.push(object[letters[i]]);
+      }
+      
+      sum += result.reduce((a, b) => a + b);
+      console.log("Сумма:", sum);
+    </script>
+  </body>
+</html>
